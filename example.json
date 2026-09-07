@@ -1,5 +1,23 @@
 [
 {
+    "model": "library.author",
+    "pk": 6,
+    "fields": {
+        "first_name": "Лев",
+        "last_name": "Толстой",
+        "birth_date": "1821-11-11"
+    }
+},
+{
+    "model": "library.author",
+    "pk": 9,
+    "fields": {
+        "first_name": "Федор",
+        "last_name": "Достоевский",
+        "birth_date": "1821-11-11"
+    }
+},
+{
     "model": "library.book",
     "pk": 1,
     "fields": {
@@ -15,33 +33,6 @@
         "title": "Преступление и наказание",
         "publication_date": "1866-01-01",
         "author": 9
-    }
-},
-{
-    "model": "library.author",
-    "pk": 6,
-    "fields": {
-        "first_name": "Лев",
-        "last_name": "Толстой",
-        "birth_date": "1821-11-11"
-    }
-},
-{
-    "model": "library.author",
-    "pk": 8,
-    "fields": {
-        "first_name": "Федор",
-        "last_name": "Достоевский",
-        "birth_date": "1821-11-11"
-    }
-},
-{
-    "model": "library.author",
-    "pk": 9,
-    "fields": {
-        "first_name": "Федор",
-        "last_name": "Достоевский",
-        "birth_date": "1821-11-11"
     }
 }
 ]
