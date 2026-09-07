@@ -138,3 +138,5 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+FORCE_COLOR = True

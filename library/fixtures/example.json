@@ -1,0 +1,246 @@
+[
+    {
+        "model": "library.author",
+        "pk": 6,
+        "fields": {
+            "first_name": "Лев",
+            "last_name": "Толстой",
+            "birth_date": "1821-11-11"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 9,
+        "fields": {
+            "first_name": "Федор",
+            "last_name": "Достоевский",
+            "birth_date": "1821-11-11"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 10,
+        "fields": {
+            "first_name": "Антон",
+            "last_name": "Чехов",
+            "birth_date": "1860-01-29"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 11,
+        "fields": {
+            "first_name": "Александр",
+            "last_name": "Пушкин",
+            "birth_date": "1799-06-06"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 12,
+        "fields": {
+            "first_name": "Михаил",
+            "last_name": "Булгаков",
+            "birth_date": "1891-05-15"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 13,
+        "fields": {
+            "first_name": "Николай",
+            "last_name": "Гоголь",
+            "birth_date": "1809-04-01"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 14,
+        "fields": {
+            "first_name": "Иван",
+            "last_name": "Тургенев",
+            "birth_date": "1818-11-09"
+        }
+    },
+
+    {
+        "model": "library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Война и мир",
+            "publication_date": "1869-01-01",
+            "author": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 2,
+        "fields": {
+            "title": "Анна Каренина",
+            "publication_date": "1877-01-01",
+            "author": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 3,
+        "fields": {
+            "title": "Воскресение",
+            "publication_date": "1899-01-01",
+            "author": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 4,
+        "fields": {
+            "title": "Преступление и наказание",
+            "publication_date": "1866-01-01",
+            "author": 9
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 5,
+        "fields": {
+            "title": "Идиот",
+            "publication_date": "1869-01-01",
+            "author": 9
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 6,
+        "fields": {
+            "title": "Братья Карамазовы",
+            "publication_date": "1880-01-01",
+            "author": 9
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 7,
+        "fields": {
+            "title": "Бесы",
+            "publication_date": "1872-01-01",
+            "author": 9
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 8,
+        "fields": {
+            "title": "Игрок",
+            "publication_date": "1866-01-01",
+            "author": 9
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 9,
+        "fields": {
+            "title": "Вишневый сад",
+            "publication_date": "1904-01-01",
+            "author": 10
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 10,
+        "fields": {
+            "title": "Три сестры",
+            "publication_date": "1901-01-01",
+            "author": 10
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 11,
+        "fields": {
+            "title": "Чайка",
+            "publication_date": "1896-01-01",
+            "author": 10
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 12,
+        "fields": {
+            "title": "Дядя Ваня",
+            "publication_date": "1899-01-01",
+            "author": 10
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 13,
+        "fields": {
+            "title": "Евгений Онегин",
+            "publication_date": "1833-01-01",
+            "author": 11
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 14,
+        "fields": {
+            "title": "Капитанская дочка",
+            "publication_date": "1836-01-01",
+            "author": 11
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 15,
+        "fields": {
+            "title": "Мастер и Маргарита",
+            "publication_date": "1967-01-01",
+            "author": 12
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 16,
+        "fields": {
+            "title": "Собачье сердце",
+            "publication_date": "1925-01-01",
+            "author": 12
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 17,
+        "fields": {
+            "title": "Мертвые души",
+            "publication_date": "1842-01-01",
+            "author": 13
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 18,
+        "fields": {
+            "title": "Ревизор",
+            "publication_date": "1836-01-01",
+            "author": 13
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 19,
+        "fields": {
+            "title": "Отцы и дети",
+            "publication_date": "1862-01-01",
+            "author": 14
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 20,
+        "fields": {
+            "title": "Дворянское гнездо",
+            "publication_date": "1859-01-01",
+            "author": 14
+        }
+    }
+]
