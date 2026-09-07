@@ -6,6 +6,9 @@ class Author(models.Model):
     last_name = models.CharField(max_length=150, verbose_name='Фамилия')
     birth_date = models.DateField(verbose_name='Дата Рождения')
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
+
     class Meta:
 
         verbose_name = 'Автор'
@@ -17,6 +20,9 @@ class Book(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название книги')
     publication_date = models.DateField(verbose_name='Дата публикации книги')
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+
+    def __str__(self):
+        return self.title
 
     class META:
 
