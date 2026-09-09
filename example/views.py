@@ -8,4 +8,3 @@ def example_contact(requests):
         return HttpResponse(f'Мы получили Ваш запрос, {name}!')
     return render(requests, 'example/example_contact.html/')
 
-
