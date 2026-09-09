@@ -1,0 +1,452 @@
+[
+    {
+        "model": "students.students",
+        "pk": 1,
+        "fields": {
+            "first_name": "Иван",
+            "last_name": "Гришанин",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 2,
+        "fields": {
+            "first_name": "Анна",
+            "last_name": "Кузнецова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 3,
+        "fields": {
+            "first_name": "Петр",
+            "last_name": "Сидоров",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 4,
+        "fields": {
+            "first_name": "Елена",
+            "last_name": "Смирнова",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 5,
+        "fields": {
+            "first_name": "Алексей",
+            "last_name": "Волков",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 6,
+        "fields": {
+            "first_name": "Мария",
+            "last_name": "Иванова",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 7,
+        "fields": {
+            "first_name": "Дмитрий",
+            "last_name": "Морозов",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 8,
+        "fields": {
+            "first_name": "Ольга",
+            "last_name": "Новикова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 9,
+        "fields": {
+            "first_name": "Сергей",
+            "last_name": "Петров",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 10,
+        "fields": {
+            "first_name": "Татьяна",
+            "last_name": "Соколова",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 11,
+        "fields": {
+            "first_name": "Андрей",
+            "last_name": "Михайлов",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 12,
+        "fields": {
+            "first_name": "Наталья",
+            "last_name": "Федорова",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 13,
+        "fields": {
+            "first_name": "Владимир",
+            "last_name": "Карпов",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 14,
+        "fields": {
+            "first_name": "Ирина",
+            "last_name": "Козлова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 15,
+        "fields": {
+            "first_name": "Юрий",
+            "last_name": "Орлов",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 16,
+        "fields": {
+            "first_name": "Екатерина",
+            "last_name": "Захарова",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 17,
+        "fields": {
+            "first_name": "Александр",
+            "last_name": "Тихонов",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 18,
+        "fields": {
+            "first_name": "Светлана",
+            "last_name": "Николаева",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 19,
+        "fields": {
+            "first_name": "Максим",
+            "last_name": "Данилов",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 20,
+        "fields": {
+            "first_name": "Валентина",
+            "last_name": "Крылова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 21,
+        "fields": {
+            "first_name": "Антон",
+            "last_name": "Романов",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 22,
+        "fields": {
+            "first_name": "Вера",
+            "last_name": "Лебедева",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 23,
+        "fields": {
+            "first_name": "Павел",
+            "last_name": "Егоров",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 24,
+        "fields": {
+            "first_name": "Людмила",
+            "last_name": "Соловьева",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 25,
+        "fields": {
+            "first_name": "Константин",
+            "last_name": "Поляков",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 26,
+        "fields": {
+            "first_name": "Галина",
+            "last_name": "Рыбакова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 27,
+        "fields": {
+            "first_name": "Василий",
+            "last_name": "Алексеев",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 28,
+        "fields": {
+            "first_name": "Инна",
+            "last_name": "Титова",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 29,
+        "fields": {
+            "first_name": "Михаил",
+            "last_name": "Гусев",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 30,
+        "fields": {
+            "first_name": "Нина",
+            "last_name": "Зайцева",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 31,
+        "fields": {
+            "first_name": "Станислав",
+            "last_name": "Горшков",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 32,
+        "fields": {
+            "first_name": "Алла",
+            "last_name": "Сорокина",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 33,
+        "fields": {
+            "first_name": "Николай",
+            "last_name": "Фомин",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 34,
+        "fields": {
+            "first_name": "Маргарита",
+            "last_name": "Белова",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 35,
+        "fields": {
+            "first_name": "Олег",
+            "last_name": "Трофимов",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 36,
+        "fields": {
+            "first_name": "Алина",
+            "last_name": "Шевцова",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 37,
+        "fields": {
+            "first_name": "Денис",
+            "last_name": "Кузьмин",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 38,
+        "fields": {
+            "first_name": "Евгения",
+            "last_name": "Калинина",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 39,
+        "fields": {
+            "first_name": "Виталий",
+            "last_name": "Макаров",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 40,
+        "fields": {
+            "first_name": "Ксения",
+            "last_name": "Александрова",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 41,
+        "fields": {
+            "first_name": "Григорий",
+            "last_name": "Никитин",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 42,
+        "fields": {
+            "first_name": "Лариса",
+            "last_name": "Мельникова",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 43,
+        "fields": {
+            "first_name": "Семен",
+            "last_name": "Андреев",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 44,
+        "fields": {
+            "first_name": "Жанна",
+            "last_name": "Ермакова",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 45,
+        "fields": {
+            "first_name": "Вячеслав",
+            "last_name": "Комаров",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 46,
+        "fields": {
+            "first_name": "Марина",
+            "last_name": "Степанова",
+            "year": "fourth"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 47,
+        "fields": {
+            "first_name": "Анатолий",
+            "last_name": "Савин",
+            "year": "first"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 48,
+        "fields": {
+            "first_name": "Алеся",
+            "last_name": "Павлова",
+            "year": "second"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 49,
+        "fields": {
+            "first_name": "Егор",
+            "last_name": "Борисов",
+            "year": "third"
+        }
+    },
+    {
+        "model": "students.students",
+        "pk": 50,
+        "fields": {
+            "first_name": "Анита",
+            "last_name": "Григорьева",
+            "year": "fourth"
+        }
+    }
+]

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Students(models.Model):
+class Student(models.Model):
     FIRST_YEAR = 'first'
     SECOND_YEAR = 'second'
     THIRD_YEAR = 'third'
