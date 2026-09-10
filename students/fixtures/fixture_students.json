@@ -1,6 +1,6 @@
 [
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 1,
         "fields": {
             "first_name": "Иван",
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 2,
         "fields": {
             "first_name": "Анна",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 3,
         "fields": {
             "first_name": "Петр",
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 4,
         "fields": {
             "first_name": "Елена",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 5,
         "fields": {
             "first_name": "Алексей",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 6,
         "fields": {
             "first_name": "Мария",
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 7,
         "fields": {
             "first_name": "Дмитрий",
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 8,
         "fields": {
             "first_name": "Ольга",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 9,
         "fields": {
             "first_name": "Сергей",
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 10,
         "fields": {
             "first_name": "Татьяна",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 11,
         "fields": {
             "first_name": "Андрей",
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 12,
         "fields": {
             "first_name": "Наталья",
@@ -108,7 +108,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 13,
         "fields": {
             "first_name": "Владимир",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 14,
         "fields": {
             "first_name": "Ирина",
@@ -126,7 +126,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 15,
         "fields": {
             "first_name": "Юрий",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 16,
         "fields": {
             "first_name": "Екатерина",
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 17,
         "fields": {
             "first_name": "Александр",
@@ -153,7 +153,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 18,
         "fields": {
             "first_name": "Светлана",
@@ -162,7 +162,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 19,
         "fields": {
             "first_name": "Максим",
@@ -171,7 +171,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 20,
         "fields": {
             "first_name": "Валентина",
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 21,
         "fields": {
             "first_name": "Антон",
@@ -189,7 +189,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 22,
         "fields": {
             "first_name": "Вера",
@@ -198,7 +198,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 23,
         "fields": {
             "first_name": "Павел",
@@ -207,7 +207,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 24,
         "fields": {
             "first_name": "Людмила",
@@ -216,7 +216,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 25,
         "fields": {
             "first_name": "Константин",
@@ -225,7 +225,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 26,
         "fields": {
             "first_name": "Галина",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 27,
         "fields": {
             "first_name": "Василий",
@@ -243,7 +243,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 28,
         "fields": {
             "first_name": "Инна",
@@ -252,7 +252,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 29,
         "fields": {
             "first_name": "Михаил",
@@ -261,7 +261,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 30,
         "fields": {
             "first_name": "Нина",
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 31,
         "fields": {
             "first_name": "Станислав",
@@ -279,7 +279,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 32,
         "fields": {
             "first_name": "Алла",
@@ -288,7 +288,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 33,
         "fields": {
             "first_name": "Николай",
@@ -297,7 +297,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 34,
         "fields": {
             "first_name": "Маргарита",
@@ -306,7 +306,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 35,
         "fields": {
             "first_name": "Олег",
@@ -315,7 +315,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 36,
         "fields": {
             "first_name": "Алина",
@@ -324,7 +324,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 37,
         "fields": {
             "first_name": "Денис",
@@ -333,7 +333,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 38,
         "fields": {
             "first_name": "Евгения",
@@ -342,7 +342,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 39,
         "fields": {
             "first_name": "Виталий",
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 40,
         "fields": {
             "first_name": "Ксения",
@@ -360,7 +360,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 41,
         "fields": {
             "first_name": "Григорий",
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 42,
         "fields": {
             "first_name": "Лариса",
@@ -378,7 +378,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 43,
         "fields": {
             "first_name": "Семен",
@@ -387,7 +387,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 44,
         "fields": {
             "first_name": "Жанна",
@@ -396,7 +396,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 45,
         "fields": {
             "first_name": "Вячеслав",
@@ -405,7 +405,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 46,
         "fields": {
             "first_name": "Марина",
@@ -414,7 +414,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 47,
         "fields": {
             "first_name": "Анатолий",
@@ -423,7 +423,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 48,
         "fields": {
             "first_name": "Алеся",
@@ -432,7 +432,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 49,
         "fields": {
             "first_name": "Егор",
@@ -441,7 +441,7 @@
         }
     },
     {
-        "model": "students.students",
+        "model": "students.student",
         "pk": 50,
         "fields": {
             "first_name": "Анита",

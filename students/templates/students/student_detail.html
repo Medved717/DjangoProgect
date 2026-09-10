@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Детали студента</title>
-</head>
-<body>
+{% extends 'students/base.html' %}
+
+{% block title %} Детали студента {% endblock %}
+
+{% block content %}
+{% include 'students/header.html' %}
     <h1>Детали студента</h1>
     <p>Имя: {{student.first_name}}</p>
     <p>Фамилия: {{student.last_name}}</p>
     <p>Курс: {{student.get_year_display}}</p>
-</body>
-</html>
+{% endblock %}

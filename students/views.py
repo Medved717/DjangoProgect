@@ -23,13 +23,13 @@ def index(requests):
     return render(requests, 'students/index.html', context=context)
 
 
-def student_detail(requests):
-    student = Student.objects.get(id='1')
+def student_detail(request, student_id):
+    student = Student.objects.get(id=student_id)
     context = {
         'student': student
     }
 
-    return render(requests, 'students/student_detail.html', context=context)
+    return render(request, 'students/student_detail.html', context=context)
 
 
 def student_list(requests):
