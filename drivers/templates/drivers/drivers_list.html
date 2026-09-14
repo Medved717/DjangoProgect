@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <title>Список водителей</title>
+</head>
+<body>
+<div>
+  <h1>Список водителей</h1>
+  <ul>
+
+    {% for driver in drivers %}
+
+    <li><a href="{% url 'drivers:driver_detail' %}">{{ driver.last_name }}</a> {{ driver.first_name }} {{ driver.patronymic }}</li>
+
+    {% endfor %}
+
+  </ul>
+
+
+</div>
+
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
