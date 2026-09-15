@@ -1,0 +1,12 @@
+{% extends 'library/base.html' %}
+{% block title %}Удаление книги{% endblock %}
+{% include 'library/headers.html' %}
+{% block content %}
+
+<h1 class="mb-4">Удаление книги</h1>
+<p>Вы действительно хотите удалить "{{book.title}}"?</p>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Удалить</button>
+    <a href="{% url 'library:books_list' %}" class="btn btn-primary">Отменить</a>
+</form>
+{% endblock %}
