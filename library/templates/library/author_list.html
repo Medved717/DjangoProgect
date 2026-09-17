@@ -1,0 +1,15 @@
+{% extends 'library/base.html' %}
+{% block title %}Список авторов{% endblock %}
+{% block content %}
+{% include 'library/header.html' %}
+<h1 class="mb-4">Список авторов</h1>
+<ul class="list-group">
+    {%for author in authors%}
+    <li class="list-group-item">
+        <a href="{% url 'library:author_detail' author.pk %}">{{ author.first_name }}</a> - {{ author.last_name }}
+        - {{ author.birth_date | date:"d M Y" }}
+
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

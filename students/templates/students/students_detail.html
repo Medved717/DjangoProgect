@@ -1,0 +1,14 @@
+{% extends 'students/base.html' %}
+
+{% block title %} Детали студента {% endblock %}
+
+{% block content %}
+{% include 'students/header.html' %}
+<h1>Детали студента</h1>
+<p>Имя: {{students.first_name}}</p>
+<p>Фамилия: {{students.last_name}}</p>
+<p>Почта: {{students.email}}</p>
+<p>Курс: {{students.get_year_display}}</p>
+<p>Дата зачисления: {{students.enrollment_date|date:'d M Y'}}</p>
+<a class="btn btn-danger" href="{% url 'students:students_update' students.pk %}">Редактировать</a>
+{% endblock %}

@@ -1,38 +1,31 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Student
-
-def about(requests):
-    return render(requests, 'students/about.html')
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, ListView, UpdateView, DetailView
+from .forms import StudentsForm
+from .models import Students
 
 
-def contact(requests):
-    if requests.method == 'POST':
-        name = requests.POST.get('name')
-        message = requests.POST.get('message')
-        return HttpResponse(f'Спасибо, {name}, Ваши данные приняты! А это сообщение {message}.')
-    else:
-        return render(requests, 'students/contact.html')
-
-def index(requests):
-    student = Student.objects.get(id='1')
-    context = {
-        'student_name': f'{student.first_name} {student.last_name}',
-        'student_year': student.get_year_display()
-    }
-    return render(requests, 'students/index.html', context=context)
+class StudentsCreateView(CreateView):
+    model = Students
+    form_class = StudentsForm
+    template_name = 'students/students_form.html'
+    success_url = reverse_lazy('students:students_list')
 
 
-def student_detail(request, student_id):
-    student = Student.objects.get(id=student_id)
-    context = {
-        'student': student
-    }
+class StudentsUpdateView(UpdateView):
+    model = Students
+    form_class = StudentsForm
+    context_object_name = 'students'
+    template_name = 'students/students_form.html'
+    success_url = reverse_lazy('students:students_list')
 
-    return render(request, 'students/student_detail.html', context=context)
+
+class StudentsListView(ListView):
+    model = Students
+    context_object_name = 'students'
+    template_name = 'students/students_list.html'
 
 
-def student_list(requests):
-    students = Student.objects.all()
-    context = {'students': students}
-    return render(requests, 'students/student_list.html', context=context)
+class StudentsDetailView(DetailView):
+    model = Students
+    context_object_name = 'students'
+    template_name = 'students/students_detail.html'

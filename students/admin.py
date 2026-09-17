@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Student
+from .models import Students
 
-@admin.register(Student)
+@admin.register(Students)
 class AdminStudents(admin.ModelAdmin):
     list_display = ['first_name', 'last_name', 'year']
     list_filter = ('year',)
