@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'students',
     'example',
     'library',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,5 @@ MAILERS = {
 }
 
 FORCE_COLOR = True
+
+AUTH_USER_MODEL = 'users.CustomUser'
