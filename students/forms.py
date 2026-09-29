@@ -1,6 +1,5 @@
 from django import forms
 from .models import Students
-from django.core.exceptions import ValidationError
 
 
 class StudentsForm(forms.ModelForm):

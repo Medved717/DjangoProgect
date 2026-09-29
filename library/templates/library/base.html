@@ -25,11 +25,29 @@
                 <a class="nav-link" href="{% url 'library:books_list' %}">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Авторы</a>
+                <a class="nav-link" href="{% url 'library:author_list' %}">Авторы</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'library:books_list' %}">Книги</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'library:books_create' %}">Добавить книгу</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'library:author_create' %}">Добавить автора</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Выйти</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Войти</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Регистрация</a>
+            </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
