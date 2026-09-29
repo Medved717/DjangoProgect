@@ -143,3 +143,7 @@ MAILERS = {
 FORCE_COLOR = True
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+LOGIN_REDIRECT_URL = 'library:books_list'
+
+LOGOUT_REDIRECT_URL = 'library:books_list'

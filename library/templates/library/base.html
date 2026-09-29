@@ -38,14 +38,19 @@
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="#">Выйти</a>
+                <form method="POST" action="{% url 'users:logout' %}">
+
+                    {% csrf_token %}
+
+                    <button type='submit' class="nav-link">Выйти</button>
+                </form>
             </li>
             {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="#">Войти</a>
+                <a class="nav-link" href="{% url 'users:login' %}">Войти</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Регистрация</a>
+                <a class="nav-link" href="{% url 'users:register' %}">Регистрация</a>
             </li>
             {% endif %}
         </ul>
