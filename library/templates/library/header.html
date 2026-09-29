@@ -1,7 +1,7 @@
 <header>
     <h1>Библиотека</h1>
-    {% if user.authenticated %}
-    <p>Добро пожаловать {{ user.username }}!</p>
+    {% if user.is_authenticated %}
+    <p>Добро пожаловать, {{ user.username }}!</p>
     {% else %}
     <p>Добро пожаловать на сайт!</p>
     {% endif %}
