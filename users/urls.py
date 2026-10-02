@@ -1,5 +1,5 @@
 from django.urls import path, reverse_lazy
-from .views import RegisterView
+from .views import RegisterView, email_verification
 from django.contrib.auth.views import LoginView, LogoutView
 
 app_name = 'users'
