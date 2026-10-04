@@ -1,3 +1,7 @@
+
+from django.template.defaulttags import URLNode
+
+
 def get_context_data(self, **kwargs):
     context_data = super().get_context_data(**kwargs)
     CategoryFormset = inlineformset_factory(Category, Product, form=ProductForm, extra=1)
@@ -79,12 +83,71 @@ class CustomUserCreationForm(UserCreationForm):
         return phone_number
 
 
-from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
-from .forms import CreationForm
+
+
+# Создание контроллера, валидации и функции для отправки привтественного письма.
+# Дополнительно нужно создать поле token в модели пользователя.
 
 
 class RegisterView(CreateView):
-    template_name = 'users/register.html'
+    form_class = UserRegister
+    template_name = 'users/register_users.html'
+    success_url = reverse_lazy('catalog:product_list')
+
+    def form_valid(self, form):
+        user = form.save()
+        user.is_active = False
+        user.save()
+        user.token = secrets.token_hex(16)
+        user.save()
+        host = self.request.get_host()
+        url = f'http://{host}/users/email_confirm/{user.token}/'
+        send_mail(
+            subject='Добро пожоловать на наш сервис!',
+            message=f'Для подтверждения аккаунта перейдите по следующей ссылке {url}',
+            from_email=EMAIL_HOST_USER,
+            recipient_list=[user.email]
+        )
+        return super().form_valid(form)
+
+def email_verification(request, token):
+    user = get_object_or_404(User, token=token)
+    user.is_active = True
+    user.save()
+    return redirect(reverse("users:login"))
+
+
+from django.urls import reverse_lazy
+from .models import User
+import secrets
+from django.core.mail import send_mail
+from config.settings import EMAIL_HOST_USER
+
+
+class RegisterUser(CreateView):
     form_class = CustomUserCreationForm
+    template_name = 'users/register.html'
     success_url = reverse_lazy('library:books_list')
+
+    def form_valid(self, form):
+        user = form
+        user.is_active = False
+        user.token = secrets.token_hex(16)
+        host = self.request.get_host()
+        url = f'http://{host}/users/email_register/{user.token}/'
+        user.save()
+        send_mail(
+            subject='Добро пожаловать!',
+            message=f'Перейди по ссылке {url}',
+            from_email=EMAIL_HOST_USER,
+            recipient_list=[user.email]
+        )
+        return super().form_valid(form)
+
+def email_verification(request, token):
+    user = get_object_or_404(User, token=token)
+    user.is_active = True
+    user.save()
+    return redirect(reverse('library:books_list'))
+
+

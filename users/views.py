@@ -1,9 +1,11 @@
 from django.core.mail import send_mail
-from django.urls import reverse_lazy
+from django.shortcuts import redirect, get_object_or_404
+from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView
 from .forms import CustomUserCreationForm
-import os
-
+import secrets
+from config.settings import EMAIL_HOST_USER
+from .models import CustomUser
 
 
 class RegisterView(CreateView):
@@ -13,12 +15,23 @@ class RegisterView(CreateView):
 
     def form_valid(self, form):
         user = form.save()
-        self.send_welcome_email(user.email)
+        user.is_active = False
+        token = secrets.token_hex(16)
+        user.token = token
+        host = self.request.get_host()
+        url = f'http://{host}/users/email_verification/{token}/'
+        user.save()
+        send_mail(
+            subject='Добро пожаловать на наш сервис!',
+            message=f'Для подтверждения учетной записи перейдите по ссылке {url}',
+            from_email=EMAIL_HOST_USER,
+            recipient_list=[user.email]
+
+        )
         return super().form_valid(form)
 
-    def send_welcome_email(self, user_email):
-        subject = 'Добро пожаловать в наш сервис!'
-        message = 'Спасибо, что зарегистрировались на нашем сервисе!'
-        from_email = os.getenv('EMAIL_HOST_USER')
-        recipient_list = [user_email,]
-        send_mail(subject, message, from_email, recipient_list)
+def email_verification(request, token):
+    user = get_object_or_404(CustomUser, token=token)
+    user.is_active = True
+    user.save()
+    return redirect(reverse('students:students_list'))
