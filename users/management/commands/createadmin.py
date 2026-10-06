@@ -6,7 +6,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         User = get_user_model()
-        user = User.obgects.create(
+        user = User.objects.create(
             email='admin@mail.ru',
             phone_number='89999999999',
             first_name='Ivan',
@@ -18,4 +18,4 @@ class Command(BaseCommand):
         user.is_superuser = True
         user.save()
         return self.stdout.write(
-            self.style.SUCCSSES(f'Поздравляю, Вы зарегистрировали пользователя с идентификатором {user.email}'))
+            self.style.SUCCESS(f'Поздравляю, Вы зарегистрировали пользователя с идентификатором {user.email}'))
