@@ -9,6 +9,8 @@ urlpatterns = [
     path('library/books_form/<int:pk>/', views.BooksUpdateView.as_view(), name='books_update'),
     path('library/books_confirm_delete/<int:pk>/', views.BooksDeleteView.as_view(), name='books_delete'),
     path('library/books_detail/<int:pk>/', views.BooksDetailView.as_view(), name='books_detail'),
+    path('library/recommend/<int:pk>/', views.RecomendBookView.as_view(), name='books_recommend'),
+    path('library/review/<int:pk>/', views.ReviewBookView.as_view(), name='books_review'),
 
     path('library/author_list/', views.AuthorListView.as_view(), name='author_list'),
     path('library/author_detail/<int:pk>/', views.AuthorDetailView.as_view(), name='author_detail'),

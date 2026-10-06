@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import TextField
 
 
 class Author(models.Model):
@@ -19,11 +20,13 @@ class Book(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название книги')
     publication_date = models.DateField(verbose_name='Дата публикации книги')
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+    review = models.TextField(null=True, blank=True)
+    recommend = models.BooleanField(null=True, blank=True)
 
     def __str__(self):
         return self.title
 
-    class META:
+    class Meta:
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
         ordering = ['title']

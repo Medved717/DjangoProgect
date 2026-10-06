@@ -1,4 +1,7 @@
+from django.http import HttpResponseForbidden
 from django.urls import reverse_lazy
+from django.views import View
+from django.shortcuts import get_object_or_404, redirect
 from library.forms import BookForm, AuthorForm
 from library.models import Book, Author
 from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView
@@ -10,6 +13,30 @@ class BooksListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     template_name = 'library/books_list.html'
     context_object_name = 'books'
     permission_required = 'library.view_book'
+
+
+class ReviewBookView(LoginRequiredMixin, View):
+    def post(self, request, pk):
+        book = get_object_or_404(Book, pk=pk)
+
+        if not request.user.has_perm('library.can_review_book'):
+            return HttpResponseForbidden('У Вас нет права для рецензирования книги.')
+
+        book.review = request.POST.get('review')
+        book.save()
+        return redirect('library:books_detail', pk=pk)
+
+
+class RecomendBookView(LoginRequiredMixin, View):
+    def post(self, request, pk):
+        book = get_object_or_404(Book, pk=pk)
+
+        if request.user.has_perm('library.can_recommend_book'):
+            return HttpResponseForbidden('У Вас нет права для рекомендации книги.')
+
+        book.recommend = True
+        book.save()
+        return redirect('library:book_detail', pk=pk)
 
 
 class BooksCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):

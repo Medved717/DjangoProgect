@@ -6,6 +6,7 @@ from django.views.generic import CreateView, ListView, UpdateView, DetailView
 from .forms import StudentsForm
 from .models import Students
 from django.shortcuts import get_object_or_404, redirect
+from django.core.cache import cache
 
 
 class PromoteStudentView(LoginRequiredMixin, View):
@@ -61,3 +62,13 @@ class StudentsDetailView(DetailView):
     model = Students
     context_object_name = 'students'
     template_name = 'students/students_detail.html'
+
+
+def my_view(request, pk):
+    data = cache.get(f'product_{pk}')
+
+    if not data:
+        data = get_object_or_404(Product, pk=pk)
+        cache.set(f'product_{pk}', data, 60 * 15)
+
+    return render(request, 'catalog/product_detail.html', {'product': data})

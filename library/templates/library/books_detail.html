@@ -9,4 +9,18 @@
 <a href="{% url 'library:books_update' book.pk %}" class="btn btn-secondary">Редактировать</a>
 <a href="{% url 'library:books_delete' book.pk %}" class="btn btn-danger">Удалить</a>
 <a href="{% url 'library:books_list' %}" class="btn btn-primary">Вернуться к списку</a>
+
+{% if perms.library.can_review_book %}
+<form action="{% url 'library:books_review' book.id %}" method="post">
+    {% csrf_token %}
+    <textarea name="review"></textarea>
+    <button type="submit">Рецензировать</button>
+</form>
+{% endif %}
+{% if perms.library.books_recommend %}
+<form action="{% url 'library:books_recommend' book.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Рекомендовать</button>
+</form>
+{% endif %}
 {% endblock %}
