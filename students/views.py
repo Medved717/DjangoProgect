@@ -7,6 +7,7 @@ from .forms import StudentsForm
 from .models import Students
 from django.shortcuts import get_object_or_404, redirect
 from django.core.cache import cache
+from .services import StudentsService
 
 
 class PromoteStudentView(LoginRequiredMixin, View):
@@ -63,6 +64,16 @@ class StudentsDetailView(DetailView):
     context_object_name = 'students'
     template_name = 'students/students_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        student_id = self.objects.id
+
+        context['full_name'] = StudentsService.get_full_name(student_id)
+        context['average_grade'] = StudentsService.calculate_average_score(student_id)
+        context['has_passed'] = StudentsService.has_passed(student_id)
+
+        return context
 
 def my_view(request, pk):
     data = cache.get(f'product_{pk}')
@@ -72,3 +83,5 @@ def my_view(request, pk):
         cache.set(f'product_{pk}', data, 60 * 15)
 
     return render(request, 'catalog/product_detail.html', {'product': data})
+
+

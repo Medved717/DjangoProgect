@@ -6,6 +6,8 @@
 <h1 class="mb-4">{{book.title}}</h1>
 <p> Автор: {{book.author.first_name}}</p>
 <p>Дата публикации {{book.publication_date|date:"d M Y"}}</p>
+<p>Средний рейтинг: {{ average_rating }}</p>
+<p>Популярная: {{ average_rating|yesno:'Да,Нет' }}</p>
 <a href="{% url 'library:books_update' book.pk %}" class="btn btn-secondary">Редактировать</a>
 <a href="{% url 'library:books_delete' book.pk %}" class="btn btn-danger">Удалить</a>
 <a href="{% url 'library:books_list' %}" class="btn btn-primary">Вернуться к списку</a>

@@ -33,3 +33,13 @@ class Students(models.Model):
             ('can_promote_student', 'can promote student'),
             ('can_expel_student', 'can expel student'),
         ]
+
+class Grade(models.Model):
+    student = models.ForeignKey(Students, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=100)
+    score=models.FloatField()
+
+    def __str__(self):
+        return f'{self.subject} {self.score}'
+
+

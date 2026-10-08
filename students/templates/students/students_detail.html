@@ -10,5 +10,9 @@
 <p>Почта: {{students.email}}</p>
 <p>Курс: {{students.get_year_display}}</p>
 <p>Дата зачисления: {{students.enrollment_date|date:'d M Y'}}</p>
+<p>{{ full_name }}</p>
+<p>{{ average_grade }}</p>
+<p>{{has_passed|yesno:'Да,Нет'}}</p>
 <a class="btn btn-danger" href="{% url 'students:students_update' students.pk %}">Редактировать</a>
+<a class="btn btn-primary" href="{% url 'students:students_list' %}">Назад</a>
 {% endblock %}
